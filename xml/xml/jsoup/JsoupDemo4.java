@@ -11,6 +11,20 @@ import java.io.IOException;
 
 /**
  *Element对象功能
+ * 4. Element：元素对象
+ * 			1. 获取子元素对象
+ * 				* getElementById​(String id)：根据id属性值获取唯一的element对象
+ * 				* getElementsByTag​(String tagName)：根据标签名称获取元素对象集合
+ * 				* getElementsByAttribute​(String key)：根据属性名称获取元素对象集合
+ * 				* getElementsByAttributeValue​(String key, String value)：根据对应的属性名和属性值获取元素对象集合
+ *
+ * 			2. 获取属性值
+ * 				* String attr(String key)：根据属性名称获取属性值
+ * 			3. 获取文本内容
+ * 				* String text():获取文本内容
+ * 				* String html():获取标签体的所有内容(包括字标签的字符串内容)
+ * 		5. Node：节点对象
+ * 			* 是Document和Element的父类
  */
 public class JsoupDemo4 {
     public static void main(String[] args) throws IOException {

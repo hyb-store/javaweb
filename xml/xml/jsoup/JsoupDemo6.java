@@ -15,6 +15,9 @@ import java.util.List;
 
 /**
  *XPath查询
+ * 2. XPath：XPath即为XML路径语言，它是一种用来确定XML（标准通用标记语言的子集）文档中某部分位置的语言
+ * 			* 使用Jsoup的Xpath需要额外导入jar包。
+ * 			* 查询w3cshool参考手册，使用xpath的语法完成查询
  */
 public class JsoupDemo6 {
     public static void main(String[] args) throws IOException, XpathSyntaxErrorException {

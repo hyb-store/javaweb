@@ -11,6 +11,9 @@ import java.io.IOException;
 
 /**
  *选择器查询
+ * 1. selector:选择器
+ * 			* 使用的方法：Elements	select​(String cssQuery)
+ * 				* 语法：参考Selector类中定义的语法
  */
 public class JsoupDemo5 {
     public static void main(String[] args) throws IOException {
