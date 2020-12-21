@@ -3,4 +3,34 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
+
+    <!-- 配置Servlet -->
+    <servlet>
+        <servlet-name>demo1</servlet-name>
+        <servlet-class>com.hyb.web.servlet.ServletDemo1</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>demo1</servlet-name>
+        <url-pattern>/demo1</url-pattern>
+    </servlet-mapping>
+
+    <!-- 配置Servlet -->
+    <servlet>
+        <servlet-name>demo2</servlet-name>
+        <servlet-class>com.hyb.web.servlet.ServletDemo2</servlet-class>
+        <!-- 制定Servlet的创建时机
+        1.第一次被访问时，创建。
+            * <load-on-startup>值为负数
+        2.在服务器启动时，创建。
+            * <load-on-startup>值为0或正整数
+        -->
+        <load-on-startup></load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>demo2</servlet-name>
+        <url-pattern>/demo2</url-pattern>
+    </servlet-mapping>
+
 </web-app>
