@@ -1,4 +1,5 @@
-package com.hyb.servlet;
+package com.hyb.web.servlet;
+
 
 import com.hyb.domain.User;
 
@@ -18,7 +19,7 @@ public class SuccessServlet extends HttpServlet {
         if (user != null){
             //给页面写一句话
             //设置编码
-            response.setContentType("test/html;charset=utf-8");
+            response.setContentType("text/html;charset=utf-8");
             //输出
             response.getWriter().write("登陆成功，"+user.getUsername()+"，欢迎您");
         }
