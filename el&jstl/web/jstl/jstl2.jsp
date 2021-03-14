@@ -16,21 +16,21 @@
         4.otherwise标签做其他情况的声明  相当于default
 --%>
 
-<%
-    request.setAttribute("number",51);
-%>
+    <%
+        request.setAttribute("number",3);
+    %>
 
-<c:choose>
-    <c:when test="${number == 1}">星期一</c:when>
-    <c:when test="${number == 2}">星期二</c:when>
-    <c:when test="${number == 3}">星期三</c:when>
-    <c:when test="${number == 4}">星期四</c:when>
-    <c:when test="${number == 5}">星期五</c:when>
-    <c:when test="${number == 6}">星期六</c:when>
-    <c:when test="${number == 7}">星期天</c:when>
+    <c:choose>
+        <c:when test="${number == 1}">星期一</c:when>
+        <c:when test="${number == 2}">星期二</c:when>
+        <c:when test="${number == 3}">星期三</c:when>
+        <c:when test="${number == 4}">星期四</c:when>
+        <c:when test="${number == 5}">星期五</c:when>
+        <c:when test="${number == 6}">星期六</c:when>
+        <c:when test="${number == 7}">星期天</c:when>
 
-    <c:otherwise>数字输入有误</c:otherwise>
-</c:choose>
+        <c:otherwise>数字输入有误</c:otherwise>
+    </c:choose>
 
 
 </body>
