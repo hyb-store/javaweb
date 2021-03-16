@@ -16,4 +16,8 @@ public interface UserDao {
     public abstract void add(User user);
 
     public abstract void delete(int id);
+
+    public abstract User findById(int id);
+
+    public abstract void update(User user);
 }
