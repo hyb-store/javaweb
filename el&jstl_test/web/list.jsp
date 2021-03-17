@@ -35,6 +35,39 @@
                 location.href="${pageContext.request.contextPath}/delUserServlet?id="+id;
             }
         }
+        window.onload = function () {
+            //给删除选中的按钮添加单击事件
+            document.getElementById("delSelected").onclick = function () {
+                if(confirm("您确定要删除选中条目吗？")){
+                    var flag = false;
+                    //判断是否有选中条目
+                    var cbs = document.getElementsByName("uid");
+                    for (var i = 0; i < cbs.length; i++) {
+                        if(cbs[i].checked){
+                            //有一个条目选中了
+                            flag = true;
+                            break;
+                        }
+                    }
+                    if(flag){//有条目被选中
+                        //表单提交
+                        document.getElementById("form").submit();
+                    }
+                }
+            }
+            //获取第一个checkbox
+            document.getElementById("firstCb").onclick = function () {
+                //获取下表所有的checkbox
+                var cbs = document.getElementsByName("uid");
+                //遍历
+                for (var i = 0; i < cbs.length; i++) {
+                //设置这些checkbox的checked状态 = firstCb.checked
+                    cbs[i].checked = this.checked;
+                }
+
+            }
+
+        }
     </script>
 </head>
 <body>
@@ -60,11 +93,13 @@
     </div>
     <div style="float: right;margin: 5px;">
         <a class="btn btn-primary" href="${pageContext.request.contextPath}/add.jsp">添加联系人</a>
-        <a class="btn btn-primary" href="add.html">删除选中</a>
+        <a class="btn btn-primary" href="javascript:void(0);" id="delSelected">删除选中</a>
     </div>
+
+    <form id="form" action="${pageContext.request.contextPath}/delSelectedServlet" method="post">
     <table border="1" class="table table-bordered table-hover">
         <tr class="success">
-            <th><input type="checkbox"></th>
+            <th><input type="checkbox" id="firstCb"></th>
             <th>编号</th>
             <th>姓名</th>
             <th>性别</th>
@@ -92,6 +127,8 @@
         </c:forEach>
 
     </table>
+    </form>
+
     <div>
         <nav aria-label="Page navigation">
             <ul class="pagination">

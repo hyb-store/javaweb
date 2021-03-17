@@ -46,4 +46,10 @@ public interface UserService {
      * @param user
      */
     public abstract void updateUser(User user);
+
+    /**
+     * 批量删除选中用户
+     * @param ids
+     */
+    public abstract void delSelectedUser(String[] ids);
 }
