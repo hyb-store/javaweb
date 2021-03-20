@@ -1,5 +1,6 @@
 package com.hyb.service;
 
+import com.hyb.domain.PageBean;
 import com.hyb.domain.User;
 
 import java.util.List;
@@ -52,4 +53,12 @@ public interface UserService {
      * @param ids
      */
     public abstract void delSelectedUser(String[] ids);
+
+    /**
+     * 分页查询
+     * @param currentPage
+     * @param rows
+     * @return
+     */
+    public abstract PageBean<User> findUserByPage(String currentPage, String rows);
 }
