@@ -4,6 +4,7 @@ import com.hyb.domain.PageBean;
 import com.hyb.domain.User;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 用户管理的业务接口
@@ -55,10 +56,11 @@ public interface UserService {
     public abstract void delSelectedUser(String[] ids);
 
     /**
-     * 分页查询
+     * 分页条件查询
      * @param currentPage
      * @param rows
+     * @param condition
      * @return
      */
-    public abstract PageBean<User> findUserByPage(String currentPage, String rows);
+    public abstract PageBean<User> findUserByPage(String currentPage, String rows, Map<String, String[]> condition);
 }
