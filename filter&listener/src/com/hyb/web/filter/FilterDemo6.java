@@ -18,7 +18,7 @@ import java.io.IOException;
  * 				* 如： AFilter 和 BFilter，AFilter就先执行了。
  * 			2. web.xml配置： <filter-mapping>谁定义在上边，谁先执行
  */
-@WebFilter("/*")
+//@WebFilter("/*")
 public class FilterDemo6 implements Filter {
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
