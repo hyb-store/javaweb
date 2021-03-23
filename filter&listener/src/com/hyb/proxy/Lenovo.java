@@ -14,5 +14,6 @@ public class Lenovo implements SaleComputer{
     @Override
     public void show() {
         System.out.println("展示电脑。。。");
+
     }
 }
