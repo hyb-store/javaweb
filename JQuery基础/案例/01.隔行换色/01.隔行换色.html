@@ -7,7 +7,12 @@
 		
 		<script>
 			//需求：将数据行的奇数行背景色设置为 pink，偶数行背景色设置为 yellow
-		
+			$(function () {
+				//1. 获取数据行的奇数行的tr，设置背景色为pink
+				$("tr:gt(1):odd").css("backgroundColor","pink");
+				//2. 获取数据行的偶数行的tr,设置背景色为yellow
+				$("tr:gt(1):even").css("backgroundColor","yellow");
+			});
 		</script>
 	</head>
 	<body>

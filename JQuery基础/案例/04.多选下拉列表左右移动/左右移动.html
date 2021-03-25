@@ -26,7 +26,23 @@
 
 		<script>
 
-			//需求：实现下拉列表选择条目左右选择功能
+			//需求：实现下拉列表选中条目左右选择功能
+
+			$(function () {
+				//toRight
+				$("#toRight").click(function () {
+					//获取右边的下拉列表对象，append(左边下拉列表选中的option)
+					$("#rightName").append($("#leftName > option:selected"));
+				});
+
+				//toLeft
+				$("#toLeft").click(function () {
+					//appendTo   获取右边选中的option，将其移动到左边下拉列表中
+					$("#rightName > option:selected").appendTo($("#leftName"));
+
+				});
+			});
+
 
 
 		</script>

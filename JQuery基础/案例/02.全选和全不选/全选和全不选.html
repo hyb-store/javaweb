@@ -4,6 +4,15 @@
 		<meta charset="UTF-8">
 		<title></title>
 		<script  src="../../js/jquery-3.3.1.min.js"></script>
+
+		<script>
+			//分析：需要保证下边的选中状态和第一个复选框的选中状态一致即可
+
+			function selectAll(obj){
+				//获取下边的复选框
+				$(".itemSelect").prop("checked",obj.checked);
+			}
+		</script>
 		
 	</head>
 	<body>
