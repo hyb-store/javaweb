@@ -20,7 +20,7 @@ import java.util.Map;
 @WebServlet("/findUserServlet")
 public class FindUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//1.获取用户名
+        //1.获取用户名
         String username = request.getParameter("username");
 
         //2.调用service层判断用户名是否存在
