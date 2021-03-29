@@ -80,6 +80,7 @@ public class jdbcDemo6executeQuery {
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
+
             //7.释放资源
 
             if(rs != null){
